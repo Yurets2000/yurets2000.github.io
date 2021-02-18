@@ -197,7 +197,6 @@ a {
 
 header {
   background-image: url('../img/backgrounds/polygon.jpg');
-  /*background-size: 100%;*/
 }
 
 main {
@@ -650,6 +649,44 @@ footer .info-block {
 
 .content-container:last-child {
   margin-bottom: 100px;
+}
+
+.breadcrumb-container {
+  width: 100%;
+  background-color: #f3f3f3;
+}
+
+.breadcrumb {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.breadcrumb > h1 {
+  margin: 0;
+  padding: 20px 0;
+}
+
+.breadcrumb ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-inline-start: 20px;
+}
+
+.breadcrumb li {
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+
+.breadcrumb li + li:before {
+  content: ">";
+  margin: 0 10px;
+}
+
+#empty-msg {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
 }
 
 /* ==========================================================================

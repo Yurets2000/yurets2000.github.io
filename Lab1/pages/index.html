@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Main Page</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fafafa">
@@ -24,7 +24,9 @@
   <div class="header-container">
     <div class="header-body">
       <div class="logo-container">
-        <img class="main-logo" src="../img/logo.png" alt="Main Logo"/>
+        <a href="./index.html">
+          <img class="main-logo" src="../img/logo.png" alt="Main Logo"/>
+        </a>
       </div>
       <div class="market-nav-container">
         <div class="market-nav">
@@ -41,10 +43,10 @@
               <a href="#">My Account</a>
             </li>
             <li>
-              <a href="#">Wish List</a>
+              <a href="./wishlist.html">Wish List</a>
             </li>
             <li>
-              <a href="#">Shopping Cart</a>
+              <a href="./shopping-cart.html">Shopping Cart</a>
             </li>
             <li>
               <a href="#">Checkout</a>
@@ -74,7 +76,7 @@
       <div class="menu">
         <div class="menu-head">
           <p>Navigation</p>
-          <a href="javascript:void(0);" class="icon" onclick="openCloseMenu()">
+          <a href="javascript:void(0);" class="icon" onclick="openClose('menu-product-categories')">
             <i class="fa fa-bars"></i>
           </a>
         </div>
@@ -706,17 +708,6 @@
     </p>
   </div>
 </footer>
-
-<script>
-  function openCloseMenu() {
-    var x = document.getElementById("menu-product-categories");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
-    }
-  }
-</script>
 
 </body>
 
