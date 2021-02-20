@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>Categories</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fafafa">
+
+  <link rel="apple-touch-icon" href="../icon.png">
+
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="../js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="../js/plugins.js"></script>
+  <script src="../js/main.js"></script>
+</head>
+
+<body>
+<header>
+  <div class="header-container">
+    <div class="header-body">
+      <div class="logo-container">
+        <a href="./">
+          <img class="main-logo" src="../img/logo.png" alt="Main Logo"/>
+        </a>
+      </div>
+      <div class="market-nav-container">
+        <div class="market-nav">
+          <div class="searchbar-container">
+            <div class="searchbar">
+              <input type="text" class="searchbar-text" placeholder="Search">
+              <button type="submit" class="searchbar-button">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <ul class="market-nav-link-list">
+            <li>
+              <a href="#">My Account</a>
+            </li>
+            <li>
+              <a href="./wishlist">Wish List</a>
+            </li>
+            <li>
+              <a href="./shopping-cart">Shopping Cart</a>
+            </li>
+            <li>
+              <a href="#">Checkout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="personal-nav-container">
+        <div class="personal-nav">
+          <a href="#" class="my-account"><i class="fa fa-user"></i></a>
+          <div id="cart-block">
+            <div id="cart-heading">
+              <i id="cart-count"><span id="total_count_ajax">0</span></i>
+              <a href="#" class="shopping-cart"><i class="fa fa-shopping-cart"></i></a>
+              <p><strong id="total-price-ajax"><span id="total-price">$0.00</span></strong></p>
+            </div>
+            <div id="cart-content">
+              <div id="cart-content-ajax">
+                <div class="empty">Your shopping cart is empty!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-menu-container">
+      <div class="menu">
+        <div class="menu-head">
+          <p>Navigation</p>
+          <a href="javascript:void(0);" class="icon" onclick="openClose('menu-product-categories')">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        <ul id="menu-product-categories" class="product-categories">
+          <li><a href="#">Desktops</a></li>
+          <li><a href="#">Laptops</a></li>
+          <li><a href="#">Tablets</a></li>
+          <li><a href="#">Smartphones</a></li>
+          <li><a href="#">Headphones</a></li>
+          <li><a href="#">Cameras</a></li>
+          <li><a href="#">Players</a></li>
+          <li><a href="#">Components</a></li>
+          <li><a href="#">Software</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="content-container">
+    <div class="products-filtering-container">
+      <div class="filtering-block">
+        <div class="categories-block">
+          <h3 class="categories-head">Categories</h3>
+          <ul class="product-categories">
+            <li><a href="#">Desktops</a></li>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Tablets</a></li>
+            <li><a href="#">Smartphones</a></li>
+            <li><a href="#">Headphones</a></li>
+            <li><a href="#">Cameras</a></li>
+            <li><a href="#">Players</a></li>
+            <li><a href="#">Components</a></li>
+            <li><a href="#">Software</a></li>
+          </ul>
+        </div>
+        <div class="filters-block">
+          <h3 class="filters-head">Additional Filters</h3>
+          <ul class="filters-categories">
+            <li>
+              <div id="manufacturer-category" class="filter-category">
+                <h4 class="filter-category-head">Manufacturer</h4>
+                <ul class="filter-subcategories">
+                  <li>
+                    <input type="checkbox" id="xiaomi" name="manufacturer" value="Xiaomi">
+                    <label for="xiaomi">Xiaomi</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="poco" name="manufacturer" value="Poco">
+                    <label for="poco">Poco</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="samsung" name="manufacturer" value="Samsung">
+                    <label for="samsung">Samsung</label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div id="color-category" class="filter-category">
+                <h4 class="filter-category-head">Color</h4>
+                <ul class="filter-subcategories">
+                  <li>
+                    <input type="checkbox" id="white" name="color" value="White">
+                    <label for="white">White</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="black" name="color" value="Black">
+                    <label for="black">Black</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="gold" name="color" value="Gold">
+                    <label for="gold">Gold</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="red" name="color" value="Red">
+                    <label for="red">Red</label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="product-block">
+        <div class="filtered-items product-items">
+          <div class="product-item">
+            <div class="product-image-container">
+              <img class="product-image" src="../img/products/xiaomi-redmi-note-9-pro.jpg">
+            </div>
+            <div class="product-info-description">
+              <p class="product-description">Xiaomi Redmi Note 9 Pro 6/128GB Interstellar Grey</p>
+              <div class="product-info">
+                <div class="product-responses">
+                  <div class="product-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="rating-value">3.2</span>
+                  </div>
+                  <div class="product-comments">
+                    <a href="#" class="comment"><i class="fa fa-comment"></i></a>
+                    <span class="comment-value">50</span>
+                  </div>
+                </div>
+                <div class="product-price">
+                  <span class="price-value">300 $</span>
+                </div>
+                <div class="product-actions">
+                  <a href="#" class="shopping-cart"><i class="fa fa-shopping-cart"></i></a>
+                  <a href="#" class="wish-list"><i class="fa fa-heart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-image-container">
+              <img class="product-image" src="../img/products/xiaomi-mi-10t-pro.jpg">
+            </div>
+            <div class="product-info-description">
+              <p class="product-description">Xiaomi Mi 10T Pro 8/256GB Lunar Silver</p>
+              <div class="product-info">
+                <div class="product-responses">
+                  <div class="product-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="rating-value">3.2</span>
+                  </div>
+                  <div class="product-comments">
+                    <a href="#" class="comment"><i class="fa fa-comment"></i></a>
+                    <span class="comment-value">50</span>
+                  </div>
+                </div>
+                <div class="product-price">
+                  <span class="price-value">375 $</span>
+                </div>
+                <div class="product-actions">
+                  <a href="#" class="shopping-cart"><i class="fa fa-shopping-cart"></i></a>
+                  <a href="#" class="wish-list"><i class="fa fa-heart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-image-container">
+              <img class="product-image" src="../img/products/samsung-galaxy-s21-ultra.jpg">
+            </div>
+            <div class="product-info-description">
+              <p class="product-description">Samsung Galaxy S21 Ultra 12/128GB Phantom Black (SM-G998BZKDSEK)</p>
+              <div class="product-info">
+                <div class="product-responses">
+                  <div class="product-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="rating-value">3.2</span>
+                  </div>
+                  <div class="product-comments">
+                    <a href="#" class="comment"><i class="fa fa-comment"></i></a>
+                    <span class="comment-value">50</span>
+                  </div>
+                </div>
+                <div class="product-price">
+                  <span class="price-value">420 $</span>
+                </div>
+                <div class="product-actions">
+                  <a href="#" class="shopping-cart"><i class="fa fa-shopping-cart"></i></a>
+                  <a href="#" class="wish-list"><i class="fa fa-heart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-image-container">
+              <img class="product-image" src="../img/products/poco-x3.jpg">
+            </div>
+            <div class="product-info-description">
+              <p class="product-description">Poco X3 6/128GB Shadow Gray</p>
+              <div class="product-info">
+                <div class="product-responses">
+                  <div class="product-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="rating-value">3.2</span>
+                  </div>
+                  <div class="product-comments">
+                    <a href="#" class="comment"><i class="fa fa-comment"></i></a>
+                    <span class="comment-value">50</span>
+                  </div>
+                </div>
+                <div class="product-price">
+                  <span class="price-value">295 $</span>
+                </div>
+                <div class="product-actions">
+                  <a href="#" class="shopping-cart"><i class="fa fa-shopping-cart"></i></a>
+                  <a href="#" class="wish-list"><i class="fa fa-heart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-image-container">
+              <img class="product-image" src="../img/products/xiaomi-redmi-note-9-pro.jpg">
+            </div>
+            <div class="product-info-description">
+              <p class="product-description">Xiaomi Redmi Note 9 Pro 6/128GB Interstellar Grey</p>
+              <div class="product-info">
+                <div class="product-responses">
+                  <div class="product-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="rating-value">3.2</span>
+                  </div>
+                  <div class="product-comments">
+                    <a href="#" class="comment"><i class="fa fa-comment"></i></a>
+                    <span class="comment-value">50</span>
+                  </div>
+                </div>
+                <div class="product-price">
+                  <span class="price-value">300 $</span>
+                </div>
+                <div class="product-actions">
+                  <a href="#" class="shopping-cart"><i class="fa fa-shopping-cart"></i></a>
+                  <a href="#" class="wish-list"><i class="fa fa-heart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-image-container">
+              <img class="product-image" src="../img/products/xiaomi-mi-10t-pro.jpg">
+            </div>
+            <div class="product-info-description">
+              <p class="product-description">Xiaomi Mi 10T Pro 8/256GB Lunar Silver</p>
+              <div class="product-info">
+                <div class="product-responses">
+                  <div class="product-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="rating-value">3.2</span>
+                  </div>
+                  <div class="product-comments">
+                    <a href="#" class="comment"><i class="fa fa-comment"></i></a>
+                    <span class="comment-value">50</span>
+                  </div>
+                </div>
+                <div class="product-price">
+                  <span class="price-value">375 $</span>
+                </div>
+                <div class="product-actions">
+                  <a href="#" class="shopping-cart"><i class="fa fa-shopping-cart"></i></a>
+                  <a href="#" class="wish-list"><i class="fa fa-heart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-image-container">
+              <img class="product-image" src="../img/products/samsung-galaxy-s21-ultra.jpg">
+            </div>
+            <div class="product-info-description">
+              <p class="product-description">Samsung Galaxy S21 Ultra 12/128GB Phantom Black (SM-G998BZKDSEK)</p>
+              <div class="product-info">
+                <div class="product-responses">
+                  <div class="product-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="rating-value">3.2</span>
+                  </div>
+                  <div class="product-comments">
+                    <a href="#" class="comment"><i class="fa fa-comment"></i></a>
+                    <span class="comment-value">50</span>
+                  </div>
+                </div>
+                <div class="product-price">
+                  <span class="price-value">420 $</span>
+                </div>
+                <div class="product-actions">
+                  <a href="#" class="shopping-cart"><i class="fa fa-shopping-cart"></i></a>
+                  <a href="#" class="wish-list"><i class="fa fa-heart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-image-container">
+              <img class="product-image" src="../img/products/poco-x3.jpg">
+            </div>
+            <div class="product-info-description">
+              <p class="product-description">Poco X3 6/128GB Shadow Gray</p>
+              <div class="product-info">
+                <div class="product-responses">
+                  <div class="product-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="rating-value">3.2</span>
+                  </div>
+                  <div class="product-comments">
+                    <a href="#" class="comment"><i class="fa fa-comment"></i></a>
+                    <span class="comment-value">50</span>
+                  </div>
+                </div>
+                <div class="product-price">
+                  <span class="price-value">295 $</span>
+                </div>
+                <div class="product-actions">
+                  <a href="#" class="shopping-cart"><i class="fa fa-shopping-cart"></i></a>
+                  <a href="#" class="wish-list"><i class="fa fa-heart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-head">
+    <div class="contact-us-email">
+      <div class="info-block icon-text">
+        <div class="icon-container left">
+          <img src="../img/icons/icon-mail.png" alt="Mail Icon"/>
+        </div>
+        <div class="description-container">
+          <h2>Do you have any question?</h2>
+          <p>eshop@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="contact-us-phone">
+      <div class="info-block icon-text">
+        <div class="icon-container">
+          <img src="../img/icons/icon-phone.png" alt="Phone Icon"/>
+        </div>
+        <div class="description-container">
+          <h2>+380972071553</h2>
+          <p>Mon-Fri: 9:00-18:00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-body">
+    <div class="general-info">
+      <div class="info-block">
+        <img class="main-logo" src="../img/logo.png" alt="Main Logo"/>
+        <h2>Kiev, Ukraine</h2>
+        <p>Phone: +380972071553</p>
+        <p>Email: eshop@gmail.com</p>
+      </div>
+    </div>
+    <div class="company-info">
+      <div class="info-block">
+        <h2>Company Info</h2>
+        <ul class="footer-list">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Delivery Information</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="personal-info">
+      <div class="info-block">
+        <h2>Additional Info</h2>
+        <ul class="footer-list">
+          <li><a href="#">My Account</a></li>
+          <li><a href="#">My Wish List</a></li>
+          <li><a href="#">My Orders</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="copyright">
+      Copyright © 2021, EShop, All Rights Reserved.
+    </p>
+  </div>
+</footer>
+
+</body>
+
+</html>

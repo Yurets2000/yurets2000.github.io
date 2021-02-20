@@ -22,6 +22,10 @@ router.get('/shopping-cart', function(req,res){
   res.sendFile(path + 'pages/shopping-cart.html');
 });
 
+router.get('/categories', function(req,res){
+  res.sendFile(path + 'pages/categories.html');
+});
+
 app.use(express.static(path));
 app.use('/', router);
 
