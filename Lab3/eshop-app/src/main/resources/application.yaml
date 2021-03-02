@@ -1,0 +1,34 @@
+server:
+  address: 0.0.0.0
+  port: 8081
+
+spring:
+  application:
+    name: e-shop
+  jpa:
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+        generate_statistics: true
+        jdbc:
+          batch_size: 4
+          lob.non_contextual_creation: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: ${DATASOURCE-USERNAME:postgres}
+    password: ${DATASOURCE-PASSWORD:postgres}
+    url: ${DATASOURCE-URL:jdbc:postgresql://localhost:5432/eshop}
+
+db:
+  preset: ${DB-PRESET:basic}
+
+cryptography:
+  log-rounds: 10
+
+logging:
+  level:
+    org.springframework.web.servlet.DispatcherServlet: debug

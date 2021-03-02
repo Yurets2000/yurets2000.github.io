@@ -10,5 +10,11 @@ Short Description:
    To run application use these commands: <br>
     - docker pull yurets2000/e-shop <br>
     - docker run --name e-shop -p 8080:8080 -d yurets2000/e-shop <br>
-   After this open localhost:8080 to see results. 
-   
+   After this open localhost:8080 to see results.
+2. **Lab3:** <br>
+   Backend created on the base of Spring Boot Framework. <br>
+   Frontend part was rewrote on Angular. <br>
+   Application run on public GCP VM (http://35.228.94.134:4200). <br>
+   To run application locally you need: <br>
+   - Download Lab3/docker-compose.yml file and put it to some directory; <br>
+   - Run docker-compose up <br>

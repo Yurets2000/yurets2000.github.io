@@ -1,0 +1,30 @@
+<div class="product-image-container">
+  <img class="product-image" src="{{product.imageUrl}}" alt="Product Item">
+</div>
+<div class="product-info-description">
+  <p class="product-name">{{product.name}}</p>
+  <div class="product-info">
+    <div class="product-responses">
+      <div class="product-rating">
+        <star-rating value="{{retrieveRating(product)}}" [totalstars]="5" checkedcolor="orange" uncheckedcolor="black"
+                     size="20px" readonly="false" (rate)="onRate($event)"></star-rating>
+      </div>
+      <div class="product-comments">
+        <a href="#" class="comment"><i class="fa fa-comment"></i></a>
+        <span class="comment-value">{{retrieveCommentsCount(product)}}</span>
+      </div>
+    </div>
+    <div class="product-price">
+      <span class="price-value">{{product.price}} $</span>
+    </div>
+    <div class="product-actions">
+      <button [style.background-color]="isInWishList ? 'salmon' : '#e0e0e0'" mat-fab (click)="onWishlist($event)">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button [style.background-color]="isInCart ? 'salmon' : '#e0e0e0'" mat-fab (click)="onCart($event)">
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+

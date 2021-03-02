@@ -1,0 +1,21 @@
+<ng-container *ngIf="data">
+  <div class="product-block">
+    <div *ngIf="dataType === 'Offering'">
+      <h1>{{data.name}}</h1>
+      <p>
+        <mat-button-toggle-group multiple="true" class="product-categories" *ngIf="productCategories">
+          <mat-button-toggle *ngFor="let productCategory of productCategories | sort: 'name'"
+                             (change)="onCategorySelectionChange($event)"
+                             [value]="productCategory" class="product-categories-item">{{productCategory.name}}</mat-button-toggle>
+        </mat-button-toggle-group>
+      </p>
+    </div>
+    <div class="product-items"
+         [class.main-items]="dataType === 'Offering'"
+         [class.filtered-items]="dataType === 'ProductCategory'">
+      <ng-container *ngFor="let product of getProducts() | sort: 'name'">
+        <app-product-item [product]="product" [class.product-item]="true"></app-product-item>
+      </ng-container>
+    </div>
+  </div>
+</ng-container>

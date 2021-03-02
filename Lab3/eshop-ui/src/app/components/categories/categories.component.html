@@ -1,0 +1,42 @@
+<div class="products-filtering-container">
+  <div class="filtering-block">
+    <div class="categories-block">
+      <h3 class="categories-head">Categories</h3>
+      <ul class="product-categories">
+        <li *ngFor="let productCategory of productCategories | sort: 'name'"
+            [class.selected-item]="productCategory.id === selectedProductCategory.id">
+          <a href="./categories?selected={{productCategory.id}}">{{productCategory.name}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="filters-block">
+      <h3 class="filters-head">Additional Filters</h3>
+      <ul class="filters-categories">
+        <li>
+          <div id="color-category" class="filter-category">
+            <h4 class="filter-category-head">Color</h4>
+            <ul class="filter-subcategories">
+              <li>
+                <input type="checkbox" id="white" name="color" value="White">
+                <label for="white">White</label>
+              </li>
+              <li>
+                <input type="checkbox" id="black" name="color" value="Black">
+                <label for="black">Black</label>
+              </li>
+              <li>
+                <input type="checkbox" id="gold" name="color" value="Gold">
+                <label for="gold">Gold</label>
+              </li>
+              <li>
+                <input type="checkbox" id="red" name="color" value="Red">
+                <label for="red">Red</label>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <app-product-block [data]="selectedProductCategory" [dataType]="'ProductCategory'"></app-product-block>
+</div>

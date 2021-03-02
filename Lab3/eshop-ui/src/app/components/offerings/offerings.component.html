@@ -1,0 +1,3 @@
+<ng-container *ngFor="let offering of offerings | sort: 'name'">
+  <app-product-block [data]="offering" [dataType]="'Offering'"></app-product-block>
+</ng-container>
