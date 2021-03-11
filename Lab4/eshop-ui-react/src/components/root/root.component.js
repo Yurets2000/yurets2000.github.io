@@ -1,4 +1,4 @@
-import './root.component.js.css';
+import './root.component.css';
 import {constants} from "../../constants";
 import {v4 as uuid_v4} from "uuid";
 import UserService from "../../services/user.service";
