@@ -6,33 +6,23 @@
         <ul class="product-categories">
           <li v-for="productCategory in sortedProductCategories"
               v-bind:key="productCategory.id"
-              v-bind:class="{selectedItem: productCategory.id === selectedProductCategory.id}">
+              v-bind:class="{selectedItem: selectedProductCategory && productCategory.id === selectedProductCategory.id}">
             <a v-bind:href="'./categories?selected=' + productCategory.id">{{productCategory.name}}</a>
           </li>
         </ul>
       </div>
-      <div class="filters-block">
+      <div class="filters-block" v-if="selectedProductCategory && selectedProductCategory.characteristicGroups">
         <h3 class="filters-head">Additional Filters</h3>
         <ul class="filters-categories">
-          <li>
+          <li v-for="characteristicGroup in selectedProductCategory.characteristicGroups"
+              v-bind:key="characteristicGroup.id">
             <div id="color-category" class="filter-category">
-              <h4 class="filter-category-head">Color</h4>
+              <h4 class="filter-category-head">{{characteristicGroup.name}}</h4>
               <ul class="filter-subcategories">
-                <li>
-                  <input type="checkbox" id="white" name="color" value="White">
-                  <label for="white">White</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="black" name="color" value="Black">
-                  <label for="black">Black</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="gold" name="color" value="Gold">
-                  <label for="gold">Gold</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="red" name="color" value="Red">
-                  <label for="red">Red</label>
+                <li v-for="characteristic in characteristicGroup.characteristics"
+                  v-bind:key="characteristic.id">
+                  <input type="checkbox" v-bind:value="characteristic.id" v-model="selectedCharacteristics">
+                  <label>{{characteristic.value}}</label>
                 </li>
               </ul>
             </div>
@@ -40,7 +30,10 @@
         </ul>
       </div>
     </div>
-    <ProductBlock v-bind:data="selectedProductCategory" v-bind:data-type="'ProductCategory'"/>
+    <ProductBlock v-bind:data="selectedProductCategory"
+                  v-bind:filteringCharacteristics="selectedCharacteristics"
+                  v-bind:key="selectedCharacteristics.join(', ')"
+                  v-bind:data-type="'ProductCategory'"/>
   </div>
 </template>
 
@@ -56,7 +49,8 @@ export default {
   data() {
     return {
       productCategories: undefined,
-      selectedProductCategory: undefined
+      selectedProductCategory: undefined,
+      selectedCharacteristics: []
     }
   },
   created() {

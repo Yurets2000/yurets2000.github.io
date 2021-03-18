@@ -26,7 +26,7 @@ import sortArray from "@/utils/list-utils";
 
 export default {
   name: "ProductBlock",
-  props: ["data", "dataType"],
+  props: ["data", "dataType", "filteringCharacteristics"],
   components: {
     ProductItem
   },
@@ -64,11 +64,15 @@ export default {
       return sortArray(this.productCategories, 'name');
     },
     products() {
-      if (this.filteringCategories && this.filteringCategories.length > 0) {
-        return this.data.products.filter(product => this.filteringCategories.indexOf(product.categoryId) !== -1);
-      } else {
-        return this.data.products;
+      let productsResult = this.data.products;
+      if (this.dataType === 'Offering' && this.filteringCategories && this.filteringCategories.length > 0) {
+        productsResult = this.data.products.filter(product => this.filteringCategories.includes(product.categoryId));
+      } else if (this.dataType === 'ProductCategory' && this.filteringCharacteristics && this.filteringCharacteristics.length > 0) {
+        productsResult = productsResult.filter(product =>
+            this.filteringCharacteristics.every(characteristic => product.characteristics.map(c => c.id).includes(characteristic))
+        );
       }
+      return productsResult;
     }
   }
 }

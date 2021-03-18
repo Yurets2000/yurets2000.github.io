@@ -6,4 +6,6 @@ export const apiUrls = {
     API_PRODUCT_CATEGORIES: BASE_URL + '/product-categories',
     API_PRODUCT_COMMENTS: BASE_URL + '/product-comments',
     API_USERS: BASE_URL + '/users',
+    API_CHARACTERISTICS: BASE_URL + '/characteristics',
+    API_CHARACTERISTIC_GROUPS: BASE_URL + 'characteristic-groups'
 }

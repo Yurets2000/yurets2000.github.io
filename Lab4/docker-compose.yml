@@ -18,6 +18,7 @@ services:
     restart: unless-stopped
   eshop-app:
     image: yurets2000/eshop-app:latest
+#    build: ./eshop-app
     container_name: eshop-app
     network_mode: bridge
     expose:

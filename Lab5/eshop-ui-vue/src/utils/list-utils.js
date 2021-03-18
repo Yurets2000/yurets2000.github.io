@@ -1,5 +1,5 @@
 export default function sortArray(array, field) {
-    if (!Array.isArray(array)) {
+    if (!array || !Array.isArray(array)) {
         return array;
     }
     array.sort((a, b) => {

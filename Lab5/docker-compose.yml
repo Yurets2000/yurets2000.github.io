@@ -18,6 +18,7 @@ services:
     restart: unless-stopped
   eshop-app:
     image: yurets2000/eshop-app:latest
+    #    build: ./eshop-app
     container_name: eshop-app
     network_mode: bridge
     expose:
@@ -35,7 +36,7 @@ services:
       - eshop-db
   eshop-ui:
     image: yurets2000/eshop-ui-vue:latest
-#    build: ./eshop-ui-react
+#    build: ./eshop-ui-vue
     container_name: eshop-ui-vue
     expose:
       - 8080
