@@ -26,10 +26,17 @@ Short Description:
    - Download Lab4/docker-compose.yml file and put it to some directory; <br>
    - Run 'docker-compose up' command <br>
    - Open http://localhost:3000 <br>
-4. **Lab5:** <br>
+5. **Lab5:** <br>
    Frontend part was rewrote on Vue. <br>
    Application run on public GCP VM (http://35.228.94.134:8080). <br>
    To run application locally you need: <br>
    - Download Lab5/docker-compose.yml file and put it to some directory; <br>
    - Run 'docker-compose up' command <br>
-   - Open http://localhost:8080 <br>   
+   - Open http://localhost:8080 <br>
+6. **Lab6:** <br>
+   Added application state management through using Redux and MobX. <br>
+   Application run on public GCP VM (http://35.228.94.134:3000). <br>
+   To run application locally you need: <br>
+   - Download Lab6/docker-compose.yml file and put it to some directory; <br>
+   - Run 'docker-compose up' command <br>
+   - Open http://localhost:3000 <br>      

@@ -1,0 +1,51 @@
+version: "3"
+
+services:
+  eshop-db:
+    image: postgres:latest
+    network_mode: bridge
+    container_name: eshop-db
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    expose:
+      - 5432
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=eshop
+    restart: unless-stopped
+  eshop-app:
+    image: yurets2000/eshop-app:latest
+    #    build: ./eshop-app
+    container_name: eshop-app
+    network_mode: bridge
+    expose:
+      - 8081
+    ports:
+      - 8081:8081
+    environment:
+      - DATASOURCE-USERNAME=postgres
+      - DATASOURCE-PASSWORD=postgres
+      - DATASOURCE-URL=jdbc:postgresql://eshop-db:5432/eshop
+    restart: unless-stopped
+    depends_on:
+      - eshop-db
+    links:
+      - eshop-db
+  eshop-ui:
+    image: yurets2000/eshop-ui-react:latest
+#    build: ./eshop-ui-react
+    container_name: eshop-ui-react
+    expose:
+      - 3000
+    ports:
+      - 3000:80
+    depends_on:
+      - eshop-app
+    links:
+      - eshop-app
+
+volumes:
+  postgres-data:

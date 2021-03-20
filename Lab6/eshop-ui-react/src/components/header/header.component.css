@@ -1,0 +1,267 @@
+header {
+    background-image: url('../../assets/img/backgrounds/polygon.jpg');
+}
+
+header .main-logo {
+    width: 160px;
+}
+
+header p,
+header a,
+header a:hover,
+header a:visited,
+header a:active {
+    color: #A0A0A0;
+}
+
+header a {
+    white-space: nowrap;
+}
+
+header ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.header-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+.header-container > div {
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: left;
+}
+
+.header-body {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.header-body > div {
+    margin: 0 10px;
+}
+
+.market-nav-container {
+    flex-grow: 2;
+}
+
+.market-nav {
+    width: min(800px, 90%);
+    margin: 0 auto;
+}
+
+.market-nav-link-list {
+    display: grid;
+    grid-template-columns: repeat(4, 25% [col-start]);
+    grid-template-rows: 100%;
+}
+
+.market-nav-link-list > li {
+    justify-self: center;
+}
+
+#cart-block {
+    color: #A0A0A0;
+}
+
+#cart-block p, #cart-block a {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    line-height: normal;
+}
+
+.personal-nav .fa {
+    font-size: 16px;
+}
+
+.personal-nav .my-account {
+    margin-right: 30px;
+}
+
+.personal-nav .shopping-cart {
+    margin-left: 10px;
+}
+
+#cart-heading > p {
+    margin-left: 20px;
+}
+
+.searchbar {
+    min-width: 250px;
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchbar-text {
+    width: 100%;
+    border: 3px solid #0074cc;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #707070;
+}
+
+.searchbar-text:focus {
+    color: black;
+}
+
+.searchbar-button {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #0074cc;
+    background: #0074cc;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.inverted-color {
+    filter: invert(75%);
+}
+
+.menu,
+.menu p,
+.menu a,
+.menu a:hover,
+.menu a:visited,
+.menu a:active {
+    color: white;
+    font-weight: 500;
+    overflow-x: hidden;
+}
+
+.menu-head {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.menu-head > * {
+    margin: 0;
+}
+
+.menu-head {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#0263ae, #7f5bca);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.menu-head .MuiSvgIcon-colorPrimary {
+    color: white;
+}
+
+.menu .product-categories {
+    background-color: #202020;
+    box-shadow: 2px 0 2px #90c0ec;
+    max-height: 300px;
+    overflow-y: scroll;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu .product-categories::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+}
+
+.menu .product-categories::-webkit-scrollbar {
+    width: 2px;
+    background-color: #F5F5F5;
+}
+
+.menu .product-categories::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 1px;
+}
+
+.menu .product-categories > li {
+    margin: 0;
+    padding: 20px;
+    width: calc(100% - 40px);
+    border-bottom: 1px solid #404040;
+}
+
+.menu .product-categories > li > a {
+    display: block;
+}
+
+.menu .product-categories:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#cart-content {
+    display: none;
+}
+
+#cart-heading {
+    display: flex;
+}
+
+#cart-heading > div {
+    margin: 0 10px;
+}
+
+.personal-nav {
+    display: flex;
+    justify-content: space-between;
+    min-width: 120px;
+}
+
+.actions-nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.actions-nav .MuiSvgIcon-root {
+    color: gold;
+}
+
+#total-count, #total-price {
+    text-align: right;
+}
+
+@media (max-width: 767px) {
+    .header-body {
+        flex-direction: column;
+    }
+
+    .header-body > div {
+        margin: 20px 0;
+    }
+
+    .market-nav {
+        width: 100%;
+    }
+
+    .logo-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .market-nav-link-list {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+}

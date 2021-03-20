@@ -1,0 +1,136 @@
+footer {
+    /*background-color: #202020;*/
+    display: flex;
+    flex-direction: column;
+}
+
+footer > div {
+    border-top: 1px solid #404040;
+}
+
+footer h3, footer h2 {
+    color: white;
+    font-weight: 500;
+}
+
+footer .main-logo {
+    width: 160px;
+}
+
+.footer-head h2, .footer-head p {
+    margin-block-start: 0.3em;
+    margin-block-end: 0.3em;
+}
+
+footer p,
+footer a,
+footer a:hover,
+footer a:visited,
+footer a:active {
+    color: #A0A0A0;
+}
+
+footer a {
+    line-height: 25px;
+    white-space: nowrap;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-head {
+    min-height: 100px;
+    display: flex;
+}
+
+.footer-head > div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-body {
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-body > div {
+    width: 33.333%;
+}
+
+.footer-bottom {
+    min-height: 50px;
+}
+
+.footer-general-info {
+    border-right: 1px solid #404040;
+}
+
+.footer-personal-info {
+    border-left: 1px solid #404040;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+}
+
+.icon-text > .description-container {
+    margin-left: 10px;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+.footer-head > div {
+    display: flex;
+    justify-content: center;
+}
+
+footer .footer-info-block {
+    padding: 20px;
+}
+
+.footer-general-info > .footer-info-block {
+    float: right;
+    margin-right: 3vw;
+}
+
+@media (max-width: 767px) {
+    .footer-head, .footer-body {
+        flex-direction: column;
+    }
+
+    .footer-head > div {
+        width: 100%;
+    }
+
+    .footer-body > div {
+        width: 100%;
+    }
+
+    .footer-general-info {
+        border: none;
+        border-bottom: 1px solid #404040;
+    }
+
+    .footer-personal-info {
+        border: none;
+        border-top: 1px solid #404040;
+    }
+
+    .footer-head > div {
+        justify-content: left;
+    }
+
+    .footer-general-info > .footer-info-block {
+        float: none;
+        margin-right: 0;
+    }
+}
