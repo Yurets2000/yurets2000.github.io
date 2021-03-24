@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://35.228.94.134:8081';
+export const BASE_URL = 'http://localhost:8081';
 
 export const apiUrls = {
     API_OFFERINGS: BASE_URL + '/offerings',
