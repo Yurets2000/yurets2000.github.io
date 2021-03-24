@@ -40,3 +40,10 @@ Short Description:
    - Download Lab6/docker-compose.yml file and put it to some directory; <br>
    - Run 'docker-compose up' command <br>
    - Open http://localhost:3000 <br>      
+7. **Lab7:** <br>
+   Added Google Maps support and Web Workers. <br>
+   Application run on public GCP VM (http://35.228.94.134:8080). <br>
+   To run application locally you need: <br>
+   - Download Lab7/docker-compose.yml file and put it to some directory; <br>
+   - Run 'docker-compose up' command <br>
+   - Open http://localhost:8080 <br>  

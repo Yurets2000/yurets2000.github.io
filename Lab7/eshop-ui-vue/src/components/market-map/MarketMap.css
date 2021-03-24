@@ -1,0 +1,15 @@
+.markets-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.markets-container h1 {
+    font-size: max(1.5em, 4vw);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.google-map {
+    width: 100%;
+    min-height: 125vh;
+}

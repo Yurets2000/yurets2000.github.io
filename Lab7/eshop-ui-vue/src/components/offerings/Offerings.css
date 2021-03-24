@@ -1,0 +1,9 @@
+.banner-container {
+    padding: 40px 0;
+}
+
+.banner-image {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
